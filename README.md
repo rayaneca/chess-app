@@ -10,6 +10,8 @@ A React Native chess application built with Expo, NativeWind, and chess.js.
 - **chess.js** - Chess game logic
 - **react-native-chessboard** - Chess board UI
 
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -21,14 +23,19 @@ A React Native chess application built with Expo, NativeWind, and chess.js.
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/rayaneca/chess-app.git
-   cd chess-app
-🌿 Git Workflow: All Commands You Need
-We use a feature branch workflow. Here are all the commands you'll use.
-
-📥 Cloning the Repository (First Time Only)
-bash
+```bash
+# 1. Clone the repository
 git clone https://github.com/rayaneca/chess-app.git
 cd chess-app
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npx expo start
+
+# 4. Open on your device
+#    - Scan QR code with Expo Go (Android/iOS)
+#    - Press 'w' for web browser
+#    - Press 'a' for Android emulator
+#    - Press 'i' for iOS simulator (Mac only)
