@@ -1,56 +1,296 @@
-# Welcome to your Expo app 👋
+# ♟️ Chess App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native chess application built with Expo, NativeWind, and chess.js.
 
-## Get started
+## 📱 Tech Stack
 
-1. Install dependencies
+- **Expo** (SDK 57) - React Native framework
+- **NativeWind** - Tailwind CSS for React Native
+- **Expo Router** - File-based routing
+- **chess.js** - Chess game logic
+- **react-native-chessboard** - Chess board UI
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 🚀 Getting Started
 
-   ```bash
-   npx expo start
-   ```
+### Prerequisites
 
-In the output, you'll find options to open the app in a
+- Node.js (v16 or later)
+- npm or yarn
+- Expo Go app on your phone (for testing)
+- Git
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Installation
 
 ```bash
-npm run reset-project
+# 1. Clone the repository
+git clone https://github.com/rayaneca/chess-app.git
+cd chess-app
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npx expo start
+
+# 4. Open on your device
+#    - Scan QR code with Expo Go (Android/iOS)
+#    - Press 'w' for web browser
+#    - Press 'a' for Android emulator
+#    - Press 'i' for iOS simulator (Mac only)
+
+
+
+
+
+---
+```
+# 🌿 Git Workflow (For Contributors)
+
+This project uses **two branches**:
+
+- **`main`** → Development branch. All new features, fixes, and changes should be made here.
+- **`master`** → Stable branch. This branch should only contain tested and working code.
+
+> **Never work directly on `master` unless specifically asked.**
+
+---
+
+## 1️⃣ Clone the Project
+
+```bash
+git clone https://github.com/rayaneca/chess-app.git
+cd chess-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## 2️⃣ Check Available Branches
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+git branch -a
+```
 
-## Learn more
+You should see something similar to:
 
-To learn more about developing your project with Expo, look at the following resources:
+```
+* main
+  master
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 3️⃣ Switch to the Development Branch
 
-Join our community of developers creating universal apps.
+If you're not already on `main`:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+git checkout main
+```
+
+or
+
+```bash
+git switch main
+```
+
+Always make sure you're on the **main** branch before starting work.
+
+---
+
+## 4️⃣ Get the Latest Changes
+
+Before writing any code, always download the newest version:
+
+```bash
+git pull origin main
+```
+
+Do this every time before you start working to avoid merge conflicts.
+
+---
+
+## 5️⃣ Create Your Own Branch
+
+Never code directly on `main`.
+
+Create a branch for your feature or fix.
+
+Example:
+
+```bash
+git checkout -b feature/login-screen
+```
+
+or
+
+```bash
+git switch -c feature/login-screen
+```
+
+Some branch name examples:
+
+```
+feature/profile-page
+feature/chess-ai
+fix/checkmate-bug
+fix/login-error
+```
+
+---
+
+## 6️⃣ Work on the Project
+
+Make your changes normally.
+
+You can check modified files:
+
+```bash
+git status
+```
+
+---
+
+## 7️⃣ Save Your Changes
+
+Stage all files:
+
+```bash
+git add .
+```
+
+Commit them:
+
+```bash
+git commit -m "Add login screen"
+```
+
+Write meaningful commit messages.
+
+Examples:
+
+```
+Add multiplayer support
+Fix board orientation
+Improve game performance
+Update README
+```
+
+---
+
+## 8️⃣ Push Your Branch
+
+The first time:
+
+```bash
+git push -u origin feature/login-screen
+```
+
+Later, you only need:
+
+```bash
+git push
+```
+
+---
+
+## 9️⃣ Create a Pull Request
+
+After pushing your branch:
+
+1. Open the GitHub repository.
+2. GitHub will suggest creating a Pull Request.
+3. Click **Compare & Pull Request**.
+4. Select:
+   - **Base:** `main`
+   - **Compare:** your branch
+5. Wait for review before merging.
+
+---
+
+## 🔄 Updating Your Branch
+
+If someone pushed new changes to `main`:
+
+Switch to main:
+
+```bash
+git checkout main
+```
+
+Download the latest code:
+
+```bash
+git pull origin main
+```
+
+Go back to your branch:
+
+```bash
+git checkout feature/login-screen
+```
+
+Merge the latest changes:
+
+```bash
+git merge main
+```
+
+---
+
+## 🚀 Updating the Stable Branch (`master`)
+
+Only after the project has been tested and everything works correctly should the `master` branch be updated.
+
+Usually this is done by the project owner after reviewing the changes.
+
+---
+
+# 📌 Daily Workflow
+
+Every time you work on the project:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature/my-feature
+```
+
+After finishing:
+
+```bash
+git add .
+git commit -m "Describe your changes"
+git push -u origin feature/my-feature
+```
+
+Then create a Pull Request to **main**.
+
+---
+
+# 📖 Useful Git Commands
+
+| Command | Description |
+|---------|-------------|
+| `git status` | Show modified files |
+| `git branch` | Show local branches |
+| `git branch -a` | Show all branches |
+| `git switch main` | Switch to main |
+| `git switch -c feature/name` | Create a new branch |
+| `git pull origin main` | Download latest changes |
+| `git add .` | Stage all changes |
+| `git commit -m "message"` | Save changes |
+| `git push` | Upload commits |
+| `git log --oneline` | Show commit history |
+
+---
+
+## ✅ Rules
+
+- Always pull before starting work.
+- Never push directly to `master`.
+- Create a new branch for every feature or bug fix.
+- Write clear commit messages.
+- Open a Pull Request instead of merging directly.
+- Ask for review before merging into `main`.
