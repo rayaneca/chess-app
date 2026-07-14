@@ -25,3 +25,10 @@ A React Native chess application built with Expo, NativeWind, and chess.js.
    ```bash
    git clone https://github.com/rayaneca/chess-app.git
    cd chess-app
+🌿 Git Workflow: All Commands You Need
+We use a feature branch workflow. Here are all the commands you'll use.
+
+📥 Cloning the Repository (First Time Only)
+bash
+git clone https://github.com/rayaneca/chess-app.git
+cd chess-app
