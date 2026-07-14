@@ -45,8 +45,8 @@ npx expo start
 
 
 ---
-
-#### 🌿 Git Workflow (For Contributors)
+```
+# 🌿 Git Workflow (For Contributors)
 
 This project uses **two branches**:
 
